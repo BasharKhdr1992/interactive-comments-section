@@ -1,0 +1,25 @@
+.add-comment {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 1em;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 12px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.add-comment-sm {
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+  .add-comment {
+    flex-direction: column;
+  }
+
+  .add-comment-sm {
+    display: flex;
+    justify-content: space-between;
+  }
+}

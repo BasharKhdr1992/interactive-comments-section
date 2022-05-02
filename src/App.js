@@ -1,25 +1,25 @@
-import logo from './logo.svg';
+import React, { useContext } from 'react';
 import './App.css';
+import Comments from './components/comments/Comments';
+import Modal from './components/UI/Modal';
+import { ModalContext } from './context/ModalContext';
+import { CommentContext } from './context/CommentContext';
 
-function App() {
+const App = () => {
+  const { modal, closeModal } = useContext(ModalContext);
+  const { deleteComment } = useContext(CommentContext);
+
+  const onConfirm = () => {
+    deleteComment();
+    closeModal();
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="wrapper">
+      {modal && <Modal onCancel={closeModal} onConfirm={onConfirm} />}
+      <Comments />
     </div>
   );
-}
+};
 
 export default App;

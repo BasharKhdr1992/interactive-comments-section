@@ -1,0 +1,33 @@
+.voting {
+  display: flex;
+  flex-direction: column;
+  margin-right: 2em;
+}
+
+.btn-voting,
+.votes {
+  padding: 10px;
+  background: hsl(228, 33%, 97%);
+  border-radius: 5px;
+  border: none;
+  font-weight: bolder;
+}
+
+.votes {
+  color: hsl(238, 40%, 52%);
+}
+
+.btn-voting {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+  .voting.voting-bg {
+    display: none;
+  }
+
+  .voting.voting-sm {
+    flex-direction: row;
+    align-content: flex-start;
+  }
+}

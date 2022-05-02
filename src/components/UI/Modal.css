@@ -1,0 +1,48 @@
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-color: hsla(211, 10%, 45%, 0.8);
+}
+
+.modal-content {
+  display: flex;
+  padding: 1em;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 30%;
+  background-color: hsl(0, 0%, 98%);
+  border-radius: 12px;
+  height: 20%;
+  box-sizing: border-box;
+}
+
+.modal-content h2 {
+  color: hsl(235, 24%, 19%);
+}
+
+.modal-content p {
+  color: hsl(211, 10%, 45%);
+}
+
+.btn-row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+@media screen and (max-width: 900px) {
+  .modal-content {
+    width: 90%;
+  }
+}
